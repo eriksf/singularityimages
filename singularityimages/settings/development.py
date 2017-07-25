@@ -20,4 +20,4 @@ DATABASES = {
     }
 }
 
-SINGULARITY_IMAGE_DIR = '/Users/eriksf/work/projects/singularity/TACC/biocontainers'
+SINGULARITY_IMAGE_DIR = '/work/projects/singularity/TACC/biocontainers'
