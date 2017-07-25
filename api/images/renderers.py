@@ -3,7 +3,7 @@ from django.conf import settings
 from rest_framework import renderers
 
 
-class BinaryRenderer(renderers.BaseRenderer):
+class Bzip2ArchiveRenderer(renderers.BaseRenderer):
     media_type = 'application/x-bzip2'
     format = 'bz2'
     charset = None
