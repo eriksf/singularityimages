@@ -5,5 +5,6 @@ from django.db import models
 class Image(models.Model):
     name = models.CharField(max_length=255)
     size_in_bytes = models.BigIntegerField()
+    version = models.CharField(max_length=25)
     created = models.DateTimeField()
     updated = models.DateTimeField()

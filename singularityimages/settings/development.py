@@ -19,3 +19,5 @@ DATABASES = {
         'PORT': os.getenv('DATABASE_PORT', '5432'),
     }
 }
+
+SINGULARITY_IMAGE_DIR = '/Users/eriksf/work/projects/singularity/TACC/biocontainers'

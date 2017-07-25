@@ -13,3 +13,5 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+SINGULARITY_IMAGE_DIR = '/Users/eriksf/work/projects/singularity/TACC/biocontainers'
