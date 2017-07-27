@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_swagger',
+    'django_celery_beat',
+    'django_celery_results',
     'api.images',
 ]
 
@@ -107,3 +109,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.getenv('STATIC_ROOT', os.path.join(BASE_DIR, 'static'))
+
+# Celery
+BROKER_URL = os.getenv('BROKER_URL')
+CELERY_RESULT_BACKEND = 'django-db'
