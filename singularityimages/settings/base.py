@@ -111,5 +111,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.getenv('STATIC_ROOT', os.path.join(BASE_DIR, 'static'))
 
 # Celery
-BROKER_URL = os.getenv('BROKER_URL')
+CELERY_BROKER_URL = os.getenv('BROKER_URL')
 CELERY_RESULT_BACKEND = 'django-db'
