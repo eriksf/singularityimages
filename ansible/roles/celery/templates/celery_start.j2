@@ -11,3 +11,4 @@ cd $DJANGODIR
 # (do not use --daemon).
 exec celery -A {{ application_name }} worker -E -l info --concurrency={{ celery_num_workers }}
 exec celery -A {{ application_name }} beat -l info -S django
+exec celery -A {{ application_name }} flower --port=5555
