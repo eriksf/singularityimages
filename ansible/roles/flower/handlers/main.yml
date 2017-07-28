@@ -1,0 +1,4 @@
+---
+
+- name: restart {{ flower_application_name }}
+  supervisorctl: name={{ flower_application_name }} state=restarted

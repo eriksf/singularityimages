@@ -12,5 +12,10 @@
     - env_vars/{{ env }}.yml
 
   roles:
+    - base
+    - rabbitmq
     - web
+    - celery
+    - celerybeat
+    - flower
     - nginx

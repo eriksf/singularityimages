@@ -1,0 +1,16 @@
+---
+
+server_root_dir: /webapps
+
+virtualenv_path: "/webapps/{{ application_name }}"
+project_path: "{{ virtualenv_path }}/{{ project_name }}"
+
+flower_user: "{{ application_name }}"
+flower_group: webapps
+
+flower_application_name: flower
+flower_scripts_dir: "{{ virtualenv_path }}/scripts/flower"
+flower_template_file: "{{ flower_application_name }}_start.j2"
+
+flower_log_dir: "{{ virtualenv_path }}/logs"
+flower_log_file: "{{ flower_log_dir }}/{{ flower_application_name }}.log"

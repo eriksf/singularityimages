@@ -1,0 +1,24 @@
+---
+
+- name: Ensure the Supervisor service is running
+  service: name=supervisor state=started enabled=yes
+
+- name: Create the Supervisor config file for {{ flower_application_name }}
+  template: src=supervisor_{{ flower_application_name }}.conf.j2
+            dest=/etc/supervisor/conf.d/{{ flower_application_name }}.conf
+
+- name: Create the {{ flower_application_name }} log directory
+  file: path={{ flower_log_dir }}
+        owner={{ flower_user }}
+        group={{ flower_group }}
+        state=directory
+
+- name: Create (or retain) the {{ flower_application_name }} log file
+  copy: content=""
+        dest={{ flower_log_file }}
+        owner={{ flower_user }}
+        group={{ flower_group }}
+        force=no
+
+- name: Re-read the Supervisor config files
+  supervisorctl: name={{ flower_application_name }} state=present

@@ -1,0 +1,15 @@
+---
+
+- name: Create the folder for the flower scripts
+  file: path={{ flower_scripts_dir }}
+        owner={{ flower_user }}
+        group={{ flower_group }}
+        mode=0774
+        state=directory
+
+- name: Create the {{ flower_application_name }} script file
+  template: src={{ flower_template_file }}
+            dest={{ flower_scripts_dir }}/{{ flower_application_name }}_start
+            owner={{ flower_user }}
+            group={{ flower_group }}
+            mode=0755

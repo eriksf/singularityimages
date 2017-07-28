@@ -17,4 +17,6 @@
     - rabbitmq
     - web
     - celery
+    - celerybeat
+    - flower
     - nginx

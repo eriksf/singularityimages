@@ -1,0 +1,10 @@
+[program:{{ flower_application_name }}]
+command={{ flower_scripts_dir }}/{{ flower_application_name }}_start
+
+autostart=true
+autorestart=true
+
+user={{ flower_user }}
+
+stdout_logfile={{ flower_log_file }}
+redirect_stderr = true
