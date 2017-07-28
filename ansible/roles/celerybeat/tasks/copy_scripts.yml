@@ -9,7 +9,7 @@
 
 - name: Create the {{ celerybeat_application_name }} script file
   template: src={{ celerybeat_template_file }}
-            dest={{ celerybeat_scripts_dir }}/{{ celery_application_name }}_start
+            dest={{ celerybeat_scripts_dir }}/{{ celerybeat_application_name }}_start
             owner={{ celerybeat_user }}
             group={{ celerybeat_group }}
             mode=0755
