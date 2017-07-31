@@ -7,6 +7,8 @@ project_path: "{{ virtualenv_path }}/{{ project_name }}"
 
 flower_user: "{{ application_name }}"
 flower_group: webapps
+flower_admin: admin
+flower_admin_password: admin123
 
 flower_application_name: flower
 flower_scripts_dir: "{{ virtualenv_path }}/scripts/flower"
